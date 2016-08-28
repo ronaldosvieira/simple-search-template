@@ -18,3 +18,8 @@ html, body {height: 100%;}
 	display: flex;
 	align-items: center;
 }
+
+label[for=search-query] {
+	text-align: center;
+	font-size: 3em;
+}

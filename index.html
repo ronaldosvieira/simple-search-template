@@ -28,14 +28,102 @@
       <div class="container fill">
         <div class="row vertical-center">
           <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+
             <form>
               <div class="form-group text-center">
                 <label for="search-query">simple-search</label>
                 <input type="text" class="form-control" id="search-query" name="search-query" placeholder="Type your query">
               </div>
+
               <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary">Search</button>
+                <a id="advanced-search-button" class="btn btn-default">Advanced search</a>
+              </div>
+
+              <div class="form-group advanced-search-panel">
+                <div class="panel panel-default">
+                  <ul class="list-group">
+
+                    <!-- add options here -->
+                    <li class="list-group-item">
+                      <div class="form-group">
+                        <div class="col-xs-4">
+                          <label for="search-location">Search location</label>
+                        </div>
+
+                        <div class="col-xs-8">
+                          <div class="row">
+                            <fieldset class="col-xs-12 col-sm-6">
+                                <input type="checkbox" name="search-location" value="title" autocomplete="off" checked>
+                                Title
+                            </fieldset>
+                                
+                              <fieldset class="col-xs-12 col-sm-6">
+                                <input type="checkbox" name="search-location" value="content" autocomplete="off" checked>
+                                Content
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="clearfix"></div>
+                    </li>
+
+                    <li class="list-group-item">
+                      <div class="form-group">
+                        <div class="col-xs-4">
+                          <label for="search-location">Genres</label>
+                        </div>
+
+                        <div class="col-xs-8">
+                          <div class="row">
+                            <fieldset class="col-xs-12 col-sm-6">
+                              <input type="checkbox" name="search-location" value="title" autocomplete="off" checked>
+                              Romance
+                            </fieldset>
+
+                            <fieldset class="col-xs-12 col-sm-6">
+                              <input type="checkbox" name="search-location" value="content" autocomplete="off" checked>
+                              Poetry
+                            </fieldset>
+                              
+                            <fieldset class="col-xs-12 col-sm-6">
+                              <input type="checkbox" name="search-location" value="content" autocomplete="off" checked>
+                              Tale
+                            </fieldset>
+                              
+                            <fieldset class="col-xs-12 col-sm-6">
+                              <input type="checkbox" name="search-location" value="content" autocomplete="off" checked>
+                              Translation
+                            </fieldset>
+                              
+                            <fieldset class="col-xs-12 col-sm-6">
+                              <input type="checkbox" name="search-location" value="content" autocomplete="off" checked>
+                              Chronicle
+                            </fieldset>
+                              
+                            <fieldset class="col-xs-12 col-sm-6">
+                              <input type="checkbox" name="search-location" value="content" autocomplete="off" checked>
+                              Critique
+                            </fieldset>
+                              
+                            <fieldset class="col-xs-12 col-sm-6">
+                              <input type="checkbox" name="search-location" value="content" autocomplete="off" checked>
+                              Misc
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="clearfix"></div>
+                    </li>
+                    <!-- end of options -->
+                  </ul>
+
+                </div>
+              </div>
             </form>
+
           </div>
         </div>
       </div>
@@ -46,6 +134,11 @@
         <script>
           $(document).ready(function() {
             $('#search-query').focus();
+          });
+
+          $('#advanced-search-button').click(function() {
+            $('.advanced-search-panel').slideToggle('fast');
+            $(this).toggleClass('active');
           });
         </script>
 

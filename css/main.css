@@ -21,3 +21,8 @@ html, body {height: 100%;}
 
 label[for=search-query] {font-size: 4em;}
 #search-query {padding: 20px 20px;}
+
+.advanced-search-panel {display: none;}
+
+.clearfix {clear: both;}
+.debug {border: 1px solid red;}

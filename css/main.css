@@ -14,9 +14,14 @@ html, body {height: 100%;}
 }
 
 label[for=search-query] {font-size: 4em;}
-#search-query {padding: 20px 20px;}
+
+#search-mode {
+	min-width: 200px;
+	margin-left: 5px;
+}
 
 .advanced-search-panel {display: none;}
 
+.full-width {width: 100%;}
 .clearfix {clear: both;}
 .debug {border: 1px solid red;}

@@ -13,6 +13,9 @@ html, body {height: 100%;}
 	align-items: center;
 }
 
+.tab-body {padding: 10px;}
+//.panel {margin-left: 0px;}
+
 label[for=search-query] {font-size: 4em;}
 #search-query {padding: 20px 20px;}
 
